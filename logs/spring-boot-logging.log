@@ -1,0 +1,5 @@
+2018-01-18 11:53:42.212  INFO 12732 --- [main] com.wpf.blog.BlogApplicationTests        : Starting BlogApplicationTests on LCN06359088 with PID 12732 (started by pengwan in D:\blog)
+2018-01-18 11:53:42.213  INFO 12732 --- [main] com.wpf.blog.BlogApplicationTests        : No active profile set, falling back to default profiles: default
+2018-01-18 11:53:46.898  INFO 12732 --- [main] com.wpf.blog.BlogApplicationTests        : Started BlogApplicationTests in 5.474 seconds (JVM running for 7.681)
+2018-01-18 11:53:47.195  INFO 12732 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-01-18 11:53:47.670  INFO 12732 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

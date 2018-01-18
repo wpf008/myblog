@@ -1,0 +1,79 @@
+## Server
+server:
+  port: 9080
+  tomcat:
+      uriEncoding: UTF-8
+
+## 数据库访问配置
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/myblog?useSSL=false&useUnicode=true&characterEncoding=utf8
+        username: root
+        password: root
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+        filters: stat,wall,log4j
+        # 初始化大小，最小，最大
+        initialSize: 5
+        minIdle: 1
+        maxActive: 20
+        # 配置获取连接等待超时的时间
+        maxWait: 60000
+        # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        timeBetweenEvictionRunsMillis: 60000
+        # 配置一个连接在池中最小生存的时间，单位是毫秒
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1 FROM DUA
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        # 打开PSCache，并且指定每个连接上PSCache的大小
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+        # 合并多个DruidDataSource的监控数据
+        useGlobalDataSourceStat: true
+        #thymeleaf 配置
+    thymeleaf:
+            prefix: classpath:/templates/
+            content-type: text/html
+            cache: false
+            mode: LEGACYHTML5
+
+
+
+## Mybatis 配置
+mybatis:
+    mapperLocations: classpath:mapper/*.xml
+    typeAliasesPackage: com.wpf.blog.modal
+    configuration:
+        map-underscore-to-camel-case: true # 开启驼峰命名规则
+        use-generated-keys: true  # 使用jdbc的getGeneratedKeys 获取数据库自增主键
+        use-column-label: true # 使用列名替换别名 默认为true
+
+# 通用mapper
+mapper:
+    #mappers 多个接口时逗号隔开
+    mappers: com.wpf.blog.common.utils.MyMapper,tk.mybatis.mapper.common.Mapper
+    not-empty: false
+    identity: MYSQL
+
+#pagehelper分页插件配置
+pagehelper:
+    helperDialect: mysql
+    pagehelper: reasonable=true
+    supportMethodsArguments: true
+    params: count=countSql
+
+#日志配置
+logging:
+  level.root: info
+  level.com.wpf.blog: debug
+  path: logs/
+  file: blog.log
+
+
+
+
