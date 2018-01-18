@@ -7,6 +7,12 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @Author:wpf
+ * @Description DruidConfig数据源配置
+ * @Date:Cteated in 4:46 PM 1/18/2018
+ * @Modified by
+ */
 @Configuration
 public class DruidConfig {
 

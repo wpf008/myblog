@@ -6,6 +6,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+/**
+ * @Author:wpf
+ * @Description
+ * @Date:Cteated in 4:46 PM 1/18/2018
+ * @Modified by
+ */
 @Controller
 public class UserController {
 

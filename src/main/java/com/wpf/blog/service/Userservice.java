@@ -7,9 +7,13 @@ import com.wpf.blog.mapper.UserMapper;
 import com.wpf.blog.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-
+/**
+ * @Author:wpf
+ * @Description
+ * @Date:Cteated in 4:46 PM 1/18/2018
+ * @Modified by
+ */
 @Service
 public class Userservice {
 

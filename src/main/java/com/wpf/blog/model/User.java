@@ -5,7 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
-
+/**
+ * @Author:wpf
+ * @Description
+ * @Date:Cteated in 4:46 PM 1/18/2018
+ * @Modified by
+ */
 @Table(name = "user")
 public class User implements Serializable {
 
